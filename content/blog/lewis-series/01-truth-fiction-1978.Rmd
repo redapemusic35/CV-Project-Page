@@ -37,7 +37,7 @@ DiagrammeR::grViz("digraph {
 
 ```
 
-Lets say that at $w_{1}$, "Baker Street" is closer to "Paddington" than it is to "Waterloo." Also at $w_{1}$ Sherlock Holmes has $10^{5}$ number of hairs on his head. While we might think that in the actual world $w_{0}$, it is also true that "Baker Street" is closer to "Paddington" than it is to "Waterloo," but this gives us no reason to think that Sherlock Holmes has $10^{5}$ number of hairs on his head. Therefore there are a number of truths $\psi^{1-n}$ which hold at $w_{1}$.
+Thest Lets say that at $w_{1}$, "Baker Street" is closer to "Paddington" than it is to "Waterloo." Also at $w_{1}$ Sherlock Holmes has $10^{5}$ number of hairs on his head. While we might think that in the actual world $w_{0}$, it is also true that "Baker Street" is closer to "Paddington" than it is to "Waterloo," but this gives us no reason to think that Sherlock Holmes has $10^{5}$ number of hairs on his head. Therefore there are a number of truths $\psi^{1-n}$ which hold at $w_{1}$.
 
 ```{r echo=F, fig.cap="\\label{fig:figs}Relations"}
 DiagrammeR::grViz("digraph {
