@@ -1,0 +1,16 @@
+---
+bibliography: [/home/redapemusic35/1-2021-22-Projects/references.bib]
+title: "Sarah and Sam"
+weight: 2
+subtitle: "Another weird story about Sam"
+excerpt: "Gasp, what should Sam and Sarah do?"
+date: 2021-01-03
+draft: false
+---
+
+Sarah and her fiance Sam are planning a wedding and both their families have agreed to contribute towards it. However, Sarah’s family is considerably less wealthy than Sam's. Sarah’s family offered an amount that is less than half of the wedding costs and Sam and Sarah are wondering whether it would be fair to let Sam's family pay more than Sarah’s. Initially they had wanted their wedding to be the envy of the three powers. Dreams of a planet-wide celebration, somewhere near the outskirts of the bubble. Close enough where any uninvited guests would still feel envious, but far enough away such that they could pretend theirs is an old-fashioned, earth-side affair, a historical “rural” Missourian country wedding similar to those in the old hymns.
+
+However, with the smaller amount agreed to by Sarah’s family, they would either need to borrow the additional amount, hampering some of the future plans they were making,[^1] or they would need to ask Sam’s family for more.
+
+[^1]: Such as purchasing the new [Origin 600i Explorer](https://starcitizen.tools/600i_Explorer) and carting off through the galaxy on a grand honeymoon.
+

@@ -1,0 +1,34 @@
+---
+bibliography: [/home/redapemusic35/1-2021-22-Projects/references.bib]
+title: "Sam the Hero"
+weight: 4
+subtitle: ""
+excerpt: "The Mithrathi's strength is in their non-doxastic faith, emunah to daat."
+date: 2021-01-03
+draft: false
+---
+
+```{r}
+knitr::opts_chunk$set(fig.path = "figs/", collapse = TRUE)
+```
+
+
+## An empty post
+
+<i class="fas fa-mug-hot"></i> woot
+
+Yay fontawesome works.
+
+## Well let's try penguins
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+ggplot(data = penguins, aes(x = flipper_length_mm)) +
+  geom_histogram(aes(fill = species), alpha = 0.5, position = "identity") +
+  scale_fill_manual(values = c("darkorange","darkorchid","cyan4"))
+```
+
