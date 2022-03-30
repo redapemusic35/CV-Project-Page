@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "www.m-reynol.com"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Sam's Emotions"
