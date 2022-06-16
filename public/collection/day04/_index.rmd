@@ -1,0 +1,17 @@
+---
+title: "Retrieving Song Lyrics"
+weight: 5
+subtitle: "John Miller's lyricgenius and Billboard Charts.."
+description: |
+  I believe that I have a fairly reproducible way to retrieve song lyrics.
+bibliography: "~/1-2021-22-Projects/references.bib"
+cascade:
+  draft: false
+  # list or single layouts are possible
+  layout: list-sidebar # list, list-sidebar, single-series
+  date: 2022-05-18
+---
+
+I've done this previously, namely I found a webscraper online, scrapped some lyrics from some sources, ran some text and sentiment analysis on them and declared that *x* music is more emotionally expressive than *y* music. I do sometimes worry about whether the numbers add up. Since then however, the sources have changed considerably and I was not able to use the code I had available to me at the time. These things happen I guess, programmers with ichy fingers always changing things.
+
+This is the latest method and I thought that it would be nice to make myself a little tutorial on what I did before I get too far. This tutorial will begin with using python to download music charts from Billboard.com. Here you obviously can pick whichever ones you like. Next, we will run some vim search and replace commands on those charts so that we can use them as a list to retrieve their lyrics. Once we have a nice somewhat tidy data set, we can run some analysis. So here we go.

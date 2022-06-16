@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>logic on Sam&#39;s Emotions</title>
+    <link>/tags/logic/</link>
+    <description>Recent content in logic on Sam&#39;s Emotions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/logic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Truth and Fiction</title>
+      <link>/blog/lewis-series/01-truth-fiction-1978/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/lewis-series/01-truth-fiction-1978/</guid>
+      <description>“But what should we do with a fiction that is not blatantly false, but false only because an author has been forgetful”? (truth and fiction, 46) In other words, why can’t we ascribe the same subject-predicate form as parallel descriptions of real-life characters; such that it would be false to say “Holmes wears a silk top hat” in the same way that it would be false to say “Nixon wears a silk top hat.</description>
+    </item>
+    
+    <item>
+      <title>The Reality Principle</title>
+      <link>/blog/lewis-series/02-spoonful/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/lewis-series/02-spoonful/</guid>
+      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
+Here I am: content/blog/lewis-series/02-spoonful/index.md  To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
+My content section is: blog  My layout is: single-series  Images in this page bundle: /blog/lewis-series/02-spoonful/sidebar-inverse.jpg   If $$p_{1}, . . . p_{n}$$ are the propositions whose fictionality a representation generates directly, another proposition, q, is fictional in it if, and only if, were it the case that $$p_{1}, .</description>
+    </item>
+    
+    <item>
+      <title>On David Lewis</title>
+      <link>/blog/lewis-series/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/lewis-series/</guid>
+      <description>** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**</description>
+    </item>
+    
+  </channel>
+</rss>

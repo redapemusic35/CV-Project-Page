@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Sam&#39;s Emotions</title>
+    <link>/categories/r/</link>
+    <description>Recent content in R on Sam&#39;s Emotions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R Markdown</title>
+      <link>/package/rmarkdown/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/package/rmarkdown/</guid>
+      <description>The rmarkdown package is a single package, but &amp;ldquo;R Markdown&amp;rdquo; is the backbone for an ecosystem of packages for creating computational documents in R. In this workshop, we&amp;rsquo;ll use the development version installed from GitHub.
+install.packages(&amp;#34;remotes&amp;#34;) remotes::install_github(&amp;#34;rstudio/rmarkdown&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>A first post</title>
+      <link>/blog/spoonful-series/01-spoonful/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/spoonful-series/01-spoonful/</guid>
+      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
+Here I am: content/blog/spoonful-series/01-spoonful.md  To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
+My content section is: blog  My layout is: single-series   does this work?     or this?      Let&amp;rsquo;s start.
+beginning     middle     end     </description>
+    </item>
+    
+    <item>
+      <title>Distill</title>
+      <link>/package/distill/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/package/distill/</guid>
+      <description>Distill is a package built for R Markdown, an ecosystem of packages for creating computational documents in R. The goal of the Distill package is to provide an output format optimized for online scientific and technical communication. You may install it from CRAN:
+install.packages(&amp;#34;distill&amp;#34;) In this workshop, we&amp;rsquo;ll also use the postcards package to generate a nice &amp;ldquo;about&amp;rdquo; page for your distill website. You may also install it from CRAN:</description>
+    </item>
+    
+    <item>
+      <title>A second post</title>
+      <link>/blog/spoonful-series/02-spoonful/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/spoonful-series/02-spoonful/</guid>
+      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
+Here I am: content/blog/spoonful-series/02-spoonful/index.md  To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
+My content section is: blog  My layout is: single-series  Images in this page bundle: /blog/spoonful-series/02-spoonful/sidebar-inverse.jpg   part 2!     does this work?      now for some very cool things     more     get ready!</description>
+    </item>
+    
+    <item>
+      <title>Blogdown</title>
+      <link>/package/blogdown/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/package/blogdown/</guid>
+      <description>The goal of the blogdown package is to provide a powerful and infinitely customizable website output format for R Markdown. You may install it from CRAN:
+install.packages(&amp;#34;blogdown&amp;#34;)  Additional resources        Up &amp;amp; running with blogdown in 2021
+   Unbreak your blogdown site
+   A spoonful of Hugo series
+  </description>
+    </item>
+    
+    <item>
+      <title>A third post</title>
+      <link>/blog/spoonful-series/03-spoonful/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/spoonful-series/03-spoonful/</guid>
+      <description>Hi, I&#39;m the here-bot cat! Use me to find your way in your website.
+Here I am: content/blog/spoonful-series/03-spoonful/index.markdown  Here is my R Markdown source file: blog/spoonful-series/03-spoonful/index.Rmarkdown You&#39;ll want to edit this file, then re-knit to see the changes take effect in your site preview.
+ To remove me, delete this line inside that file: {{&amp;lt; here &amp;gt;}}
+My content section is: blog  My layout is: single-series  Images in this page bundle: /blog/spoonful-series/03-spoonful/featured-photo.</description>
+    </item>
+    
+    <item>
+      <title>A Spoonful of Hugo</title>
+      <link>/blog/spoonful-series/</link>
+      <pubDate>Sun, 03 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/spoonful-series/</guid>
+      <description>** No content below YAML for the series _index. This file is a leaf bundle, and provides settings for the listing page layout and sidebar content.**</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+---
+date: "2021-10-08"
+draft: false
+excerpt: But what should we do with a fiction that is not blatantly false, but false only because an author has been forgetful? . . . 
+subtitle: ""
+title: On Truth and Fiction 
+weight: 1
+---
+
+"But what should we do with a fiction that is not blatantly false, but false only because an author has been forgetful"? (truth and fiction, 46) In other words, why can't we ascribe the same subject-predicate form as parallel descriptions of real-life characters; such that it would be false to say "Holmes wears a silk top hat" in the same way that it would be false to say "Nixon wears a silk top hat."
+
+As it stands now, several difficulties arise in doing so:
+
+* In some ways, Holmes is a real-life person of flesh and blood as is Nixon.
+* How many members are there in Sir Joseph's chorus, *five*? *fifty*?
+* What restricts ranges of quantification.
+* Finally, why are fictional characters immune to inferred consequences?
+
+> . . . the Meinongian must tell us why truths about fictional characters are cut off, sometimes though not always, from the consequences they ought to imply (37).
+
+The answer to this question, argues Lewis is that we must first abstract away from the original to several of the possible revisions that remain closest to the original.
+
+```{r echo=F, fig.cap="\\label{fig:figs}Closest Worlds"}
+DiagrammeR::grViz("digraph {
+  graph [layout = dot, rankdir = TB]
+  
+  node [shape = oval]        
+  rec1 [label = <Actual World; &#x3C8;@^{1}w@_{0}>]
+  rec2 [label = 'Nearest w@_{1}']
+  rec3 [label =  'Nearest w@_{2}']
+  rec4 [label = 'Nearest w@_{3}']
+  
+  # edge definitions with the node IDs
+  rec1 -> rec2 -> rec3 -> rec4
+  }",
+  height = 500)
+
+```
+
+Thest Lets say that at $w_{1}$, "Baker Street" is closer to "Paddington" than it is to "Waterloo." Also at $w_{1}$ Sherlock Holmes has $10^{5}$ number of hairs on his head. While we might think that in the actual world $w_{0}$, it is also true that "Baker Street" is closer to "Paddington" than it is to "Waterloo," but this gives us no reason to think that Sherlock Holmes has $10^{5}$ number of hairs on his head. Therefore there are a number of truths $\psi^{1-n}$ which hold at $w_{1}$.
+
+```{r echo=F, fig.cap="\\label{fig:figs}Relations"}
+DiagrammeR::grViz("digraph {
+  graph [layout = dot, rankdir = TB]
+  
+  node [shape = oval]        
+  rec1 [label = 'Actual World, w@_{0}']
+  rec2 [label = 'Nearest w@_{1} psi@^{1-n}']
+  rec3 [label =  'Nearest w@_{2}']
+  rec4 [label = 'Nearest w@_{3}']
+  
+  # edge definitions with the node IDs
+  rec1 -> rec2  rec1 -> rec4
+  }",
+  height = 500)
+
+```
+
+The above is wrong because Sherlock Holmes does not appear to have $10_{5}$ number of hairs on his head. What this unfortunate sequence looks like is:

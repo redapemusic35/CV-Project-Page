@@ -1,0 +1,38 @@
+---
+title: "Introduction"
+author: Montaque Reynolds
+weight: 1
+subtitle: "Setup"
+date: 2022-06-15
+draft: false
+---
+
+```{r, setup, echo=FALSE, messages=FALSE}
+setwd("/home/redapemusic35/1-2021-22-Projects/Website/CV-Project-Page/")
+```
+
+# Starting
+
+### Prerequisites
+We’ve made a few assumptions about what you already know in order to get the most out of this book. You should be generally numerically literate, and it’s helpful if you have some programming experience already. If you’ve never programmed before, you might find Hands on Programming with R by Garrett to be a useful adjunct to this book.
+
+There are four things you need to run the code in this book: R, RStudio, a collection of R packages called the tidyverse, and a handful of other packages. Packages are the fundamental units of reproducible R code. They include reusable functions, the documentation that describes how to use them, and sample data.
+
+### R
+To download R, go to CRAN, the comprehensive R archive network. CRAN is composed of a set of mirror servers distributed around the world and is used to distribute R and R packages. Don’t try and pick a mirror that’s close to you: instead use the cloud mirror, https://cloud.r-project.org, which automatically figures it out for you.
+
+A new major version of R comes out once a year, and there are 2-3 minor releases each year. It’s a good idea to update regularly. Upgrading can be a bit of a hassle, especially for major versions, which require you to reinstall all your packages, but putting it off only makes it worse.
+
+### RStudio
+RStudio is an integrated development environment, or IDE, for R programming. Download and install it from http://www.rstudio.com/download. RStudio is updated a couple of times a year. When a new version is available, RStudio will let you know. It’s a good idea to upgrade regularly so you can take advantage of the latest and greatest features. For this book, make sure you have at least RStudio 1.0.0.
+
+When you start RStudio, you’ll see two key regions in the interface:
+
+```{r, echo=FALSE, messages=FALSE}
+library(knitr)
+library(png)
+library(grid)
+
+img <- readPNG("/home/redapemusic35/1-2021-22-Projects/images/rstudio-console.png") # readPNG to read in image
+grid.raster(img) # render image
+```

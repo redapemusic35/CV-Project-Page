@@ -1,0 +1,112 @@
+---
+title: "R Objects and Commands"
+author: Montaque Reynolds 
+weight: 5
+subtitle: "3 types of R objects, vector, data frame, and matrix."
+date: 2021-01-26
+draft: false
+links:
+- icon: campground
+  icon_pack: fas
+  name: slides
+  url: "/slides/05-why-netlify.html"
+- icon: hiking
+  icon_pack: fas
+  name: activity
+  url: "collection/day02/05-netlify/#activity"
+---
+
+## Vectors
+
+Contains a set of values. These include `vec_num`, number vector and `vec_char` whwhich is a character vector. `c()` combines the elements of a vector and `<-` assigns a vector to a variable.
+
+```{r}
+vec_num <- c(1, 5, 6, 3)
+vec_num
+```
+
+```{r}
+vec_char <- c("apple", "banana", "mandarin", "melon")
+vec_char
+```
+
+Once we have created a vector, we can extract its elements using the `[]` operator. For instance, you can extract the first element `[1]`, 
+
+```{r}
+vec_char <- c("apple", "banana", "mandarin", "melon")
+vec_char[1]
+```
+
+or the first 3 elements `[1:3]`.
+
+```{r}
+vec_char[1:3]
+```
+
+## Some functions
+
+### Arithmetic, Multiplication, Division, Subtraction
+
+```{r}
+vec_num2 <- vec_num + 2
+vec_num3 <- vec_num / 2
+vec_num4 <- vec_num * 4
+vec_num5 <- vec_num - 1
+
+vec_num
+
+# Addition
+
+vec_num2
+
+# Division
+
+vec_num3
+
+# Multiplication
+
+vec_num4
+
+# Subtraction
+
+vec_num5
+```
+
+## Comparing vectors using relational operators (returns `TRUE` or `FALSE`)
+
+```{r}
+vec_logi_gt5 <- vec_num >= 5
+vec_logi_gt5
+```
+
+We can do this using the equality operator only on character vectors
+
+```{r}
+vec_logi_apple <- vec_char == "apple"
+vec_logi_apple
+```
+
+We can also concatenate vector elements using `paste()`. 
+
+```{r}
+vec_char2 <- paste(c("red", "yellow", "orange", "green"), vec_char)
+print(vec_char2)
+```
+
+We can also set names to the elements of a numeric vector
+
+```{r}
+names(vec_num) <- vec_char
+print(vec_num)
+
+```
+
+## Data Frames
+
+Data Frames combine multiple vectors to construct a data set. However, though vectors can be of different types, they can only be combined if they have the same lengths. 
+
+```{r}
+dat_fruit <- data.frame(name = vec_char, count = vec_num)
+print(dat_fruit)
+```
+

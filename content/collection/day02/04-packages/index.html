@@ -1,0 +1,28 @@
+---
+title: "Quanteda Dictionaries"
+weight: 4
+subtitle: "Using Quanteda's sentiment functions."
+links:
+- icon: campground
+  icon_pack: fas
+  name: slides
+  url: "/slides/04-why-blog.html"
+- icon: hiking
+  icon_pack: fas
+  name: activity
+  url: "collection/day01/04-blog/#activity"
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>This post started as an exploration of different types of sentiment analysis. However, I ran into some issues using quanteda. Because of these issues, it occurred to me that I should probably do a post on Quanteda. Therefore, this is now a post using quanteda for text analysis, including sentiment analysis. It should be stated here, that I am largely following the tutorial at <a href="https://tutorials.quanteda.io/introduction/install/"><code>quanteda</code>’s home page</a>. Please go there to follow the tutorial because it is possible for some functions to change. This page is largely to remind myself of what packages I’ve used.</p>
+<p>First, we are going to install the quanteda package.</p>
+<pre class="r"><code>install.packages(&quot;quanteda&quot;)</code></pre>
+<p>We will also need to load the following functions separately: <code>install.packages("quanteda.textmodels") install.packages("quanteda.textstats") install.packages("quanteda.textplots")</code></p>
+<pre class="r"><code>install.packages(&quot;quanteda.textmodels&quot;)
+install.packages(&quot;quanteda.textstats&quot;)
+install.packages(&quot;quanteda.textplots&quot;)</code></pre>
+<p>We also use the <code>readtext</code> package to read in <code>txt</code> files.</p>
+<pre class="r"><code>install.packages(&quot;readtext&quot;)</code></pre>
+<p>Some of the tutorials we will look at are in the <code>quanteda.corpora</code> package.</p>

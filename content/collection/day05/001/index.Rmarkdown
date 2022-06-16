@@ -1,0 +1,88 @@
+---
+title: "What is Tidy Text?"
+author: Montaque Reynolds 
+weight: 1
+subtitle: "Blah."
+date: 2022-06-14
+draft: false
+---
+
+### What Tidy Text Look Like?
+
+The specific structure of *tidy text* is:
+
+* Each variable is a column
+* Each observation is a row
+* Each type of observational unit is a table
+
+Below is an example of a character vector:
+
+```{r}
+text <- c("Because I could not stop for Death -",
+          "He kindly stopped for me -",
+          "The Carriage held but just Ourselves -",
+          "and Immortality")
+
+text
+```
+
+We have taken four character strings; "Because I could not . . ." etc, and stored it in a variable called `text`.
+
+In order to analyze it, we first place it in a frame:
+
+```{r}
+
+library(dplyr)
+text_df <- tibble(line = 1:4, text = text)
+
+text_df
+```
+
+This particular dataframe is called a `tibble`. We use tibbles because they have a convenient method of printing output, will not convert strings to factors (numbers), and do not use row names. However, in this format, we still cannot compare word frequencies etc. This is because each object that we have to work with is a full sentence and therefore does not let us access each word individually. Therefore we need to convert it into a format that allows **one token per document (tokenization)**. We will do this using the `unnest_tokens()` function:
+
+```{r}
+
+library(tidytext)
+
+text_df %>%
+  unnest_tokens(word, text)
+
+```
+
+Looking at the output shows us three columns. The first is the row of the document, the second comprises the sentence that that particular token belonged to (line), and finally the token itself (word).
+
+In the following, we will begin to manipulate, process, and visualize the text using our set of *tidy* tools: `dplyr`, `tidyr`, and `ggplot2`:
+
+![A flowchart of a typical text analysis using tidy data principles. This chapter shows how to summarize and visualize text using these tools.](/home/redapemusic35/1-2021-22-Projects/Website/CV-Project-Page/static/tdrflowchart.png)
+
+### Tidy Text and Jane Austen
+
+```{r}
+
+library(janeaustenr) # import jane austen
+library(dplyr) # the r package dplyr
+library(stringr) # and stringr
+
+original_books <- austen_books() %>% # create a variable to store chapters etc
+  group_by(book) %>%
+  mutate(linenumber = row_number(),
+         chapter = cumsum(str_detect(text, # to find the chapters
+                                     regex("^chapter [\\divxlc]",
+                                           ignore_case = TRUE)))) %>%
+  ungroup()
+
+original_books
+
+```
+
+As we did before, we need to convert it into a **one token per line** format:
+
+```{r}
+
+library(tidytext)
+tidy_books <- original_books %>%
+  unnest_tokens(word, text)
+
+tidy_books
+
+```

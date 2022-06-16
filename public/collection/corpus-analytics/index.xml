@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Music of the Moral Emotions on Sam&#39;s Emotions</title>
+    <link>/collection/corpus-analytics/</link>
+    <description>Recent content in The Music of the Moral Emotions on Sam&#39;s Emotions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/collection/corpus-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part I. Preliminaries.</title>
+      <link>/collection/corpus-analytics/01-preliminaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/corpus-analytics/01-preliminaries/</guid>
+      <description>Mark Alfano maps the prevalence and interconnnections among the main topics and thesis of Nietzsche&amp;rsquo;s philosophical writings as they develop over time by paying attention to to what he has to say about affirmation, agency, the ascetic ideal, drives, embodiment, emotions, the eternal recurrence, friendship, genealogy, health, history, inquiry, justice, life, nihilism, perspectivism, the self, the soverign individual, tragedy, value, virtue, and the will to power (composite map of semantic content).</description>
+    </item>
+    
+    <item>
+      <title>Part II</title>
+      <link>/collection/corpus-analytics/02-selection-and-representation/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/corpus-analytics/02-selection-and-representation/</guid>
+      <description>How do we select collections of text, and how do we see these results as a representation?:  Principles of selection and representation selecting documents:  bag of words approach multinominal language model vector space model and similarity metrics   distributed representations of words from language sequences     How to select the core constructs of a distant-reading inquiry. How to operationalize these constructs for querying the Nietzsche Source.</description>
+    </item>
+    
+    <item>
+      <title>Part III</title>
+      <link>/collection/corpus-analytics/03-discovery/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/corpus-analytics/03-discovery/</guid>
+      <description> Four Methods of principles of discovery:  discriminating words clustering topic models low-dimensional document embeddings    </description>
+    </item>
+    
+    <item>
+      <title>Part IV</title>
+      <link>/collection/corpus-analytics/04-measurement/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/corpus-analytics/04-measurement/</guid>
+      <description> Principles of measurement word counting an overview of supervised classification coding a training set classifying documents with supervised learning checking performance repurposing discovery methods  </description>
+    </item>
+    
+    <item>
+      <title>Part V</title>
+      <link>/collection/corpus-analytics/05-inference/</link>
+      <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/corpus-analytics/05-inference/</guid>
+      <description> Principles of Inference Prediction Causal Inference Text as Outcome Text as Treatment Text as Confounder  </description>
+    </item>
+    
+    <item>
+      <title>Part VI</title>
+      <link>/collection/corpus-analytics/06-conclusion/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/corpus-analytics/06-conclusion/</guid>
+      <description> How to use this book in the social sciences Applying our principles beyond text data avoiding the cycle of creation and destruction in social science methodology  </description>
+    </item>
+    
+  </channel>
+</rss>

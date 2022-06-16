@@ -1,0 +1,29 @@
+---
+title: "An Rmarkdown post"
+subtitle: ""
+excerpt: "testing the excerpt field"
+date: 2020-12-30
+author: "Alison Hill"
+draft: false
+images:
+series:
+tags:
+categories:
+layout: single
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="air-quality" class="section level2">
+<h2>Air quality</h2>
+<pre class="r"><code>with(airquality, boxplot(Temp ~ Month))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<pre class="r"><code>with(airquality, plot(Ozone ~ Temp))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<pre class="r"><code>mlev &lt;- levels(with(airquality, as.factor(Month)))
+with(airquality, plot(Ozone ~ Temp, 
+                      pch = as.numeric(mlev), 
+                      col = mlev))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>

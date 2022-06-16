@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sam&#39;s Emotions</title>
+    <link>/blog/</link>
+    <description>Recent content on Sam&#39;s Emotions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty in Pink</title>
+      <link>/blog/moral-worth/</link>
+      <pubDate>Mon, 04 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/moral-worth/</guid>
+      <description>Sometimes a person does the right thing without earning our admiration. Why do these agent’s actions prompt us to praise—or blame—when another’s would earn the opposite? Because deep moral concern, or its lack, is a signifying mark of a person’s character. In other words, the degree of someone’s moral concern is a distinguishing (representative) feature of that person’s character.
+ The moral worth of an action is the extent to which the agent deserves moral praise or blame for performing the action, the extent to which the action speaks well of the agent.</description>
+    </item>
+    
+    <item>
+      <title>Autonomy and Creativity</title>
+      <link>/blog/cardi-b/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/cardi-b/</guid>
+      <description>Cardie B. For instance, many argue that cardie b’s artwork is above reproach because it expresses freedom of expression etc and that it’s representative of a platform that allows her to be who she really is. Doesn’t force her into a box created by social constructs etc. However, there are two ways to look at this issue. On one hand, she’s being “herself” and that’s more admirable than portraying someone that isn’t really her.</description>
+    </item>
+    
+    <item>
+      <title>An Rmarkdown post</title>
+      <link>/blog/modal-narrative/</link>
+      <pubDate>Wed, 30 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/modal-narrative/</guid>
+      <description>  Air quality with(airquality, boxplot(Temp ~ Month)) with(airquality, plot(Ozone ~ Temp)) mlev &amp;lt;- levels(with(airquality, as.factor(Month))) with(airquality, plot(Ozone ~ Temp, pch = as.numeric(mlev), col = mlev))  </description>
+    </item>
+    
+    <item>
+      <title>Hirsch on Numbers</title>
+      <link>/blog/korachs-rebellion/</link>
+      <pubDate>Tue, 02 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/korachs-rebellion/</guid>
+      <description>Introduction   Regarding the Korach rebellion, in regards to Korach’s selfish interests, he refers to the Israelites in the dessert as a Holy people. However, this assertion infers that the people are already Holy and therefore do not need to strive for Holiness by way of someone (Moses) who intercedes on their behalf. However “the premises on which Korach based his revolt were false and the deductions in their application to the circumstances to which he referred them, no less false.</description>
+    </item>
+    
+  </channel>
+</rss>

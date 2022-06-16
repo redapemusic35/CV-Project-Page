@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Literature on Sam&#39;s Emotions</title>
+    <link>/tags/literature/</link>
+    <description>Recent content in Literature on Sam&#39;s Emotions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="/tags/literature/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Phil 2050-14</title>
+      <link>/project/ethics/</link>
+      <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/project/ethics/</guid>
+      <description>Hopefully this will allow you to access course content quickly and easily. It is easier for me to maintain and you might have found that it was simply a click from Canvas. I will post the weekly assignments and lecture slides and notes from the previous week. The 5 numbers at the end of the links under &amp;ldquo;Lecture slides and notes&amp;rdquo; correspond to the Monday of the week&amp;rsquo;s lectures comprising that slide.</description>
+    </item>
+    
+  </channel>
+</rss>

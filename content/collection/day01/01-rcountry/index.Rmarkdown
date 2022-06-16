@@ -1,0 +1,323 @@
+---
+title: "Rrrr Country"
+weight: 1
+subtitle: "Running some analysis on Country music using R."
+excerpt: "I cannot promise fame or fortune, but I can promise: friendship, findability, fun, and function."
+---
+
+**Disclaimer** This tutorial requires some experience with both python and R and the command line.
+
+## Some Basics 
+
+First, I should point out that much of the content in this section will be based on the book *Text Analysis with R for Students of Literature* by Matthew L. Jockers.
+
+### R and RStudio
+
+There are at least two different kinds of environments that you can work with R in. Currently, the environment that I am using is a terminal *like* environment called vim. Vim works using a number of plugins and for my purposes, the main one is is Nvim-R. I am not going to recommend this if you do not have experience with it. Rather I will specify the basic method for getting started from scratch with no experience.
+
+1. To download the current version of `R` head to [R](http://cran.at.r-project.org) and select on your operating system:
+	1. For `Linux`, choose distribution and installer file.
+2. Download the "Desktop" version of [RStudio](http://www.rstudio.com)
+	1. Follow the installation instructions
+	2. Launch RStudio like any other program
+
+## Creating the Materials 
+
+Primarily, this tutorial is for my own personal purposes meaning that these instructions are ones that I've used to accomplish some task and do not want to forget.
+
+### Billboard Music Charts
+
+Ultimately, I am aiming to compare contextual sentiment expression across two genres of billboard music charts; namely Country and Hip-Hop R-n-B. To do this, it is helpful to identify a number of Billboard music charts that correspond to these styles. To do this, I've found the `billboard.py` python api by [Allen Guo](https://github.com/guoguo12) to be central. [It can be found here](https://github.com/guoguo12/billboard-charts). It is merely an api that gives you access to [Billboard.com](billboard.com)'s music charts.
+
+First, find a chart:
+
+`chart = billboard.ChartData('Hot-Country-Songs', year=2022)` selects a specific "year end chart" from Billboard.com which you can get [grouped by category here](https://www.billboard.com/charts) and the [year-end charts from here](https://www.billboard.com/charts/year-end).
+
+**Next**
+
+1. create new file with an extension `.py`
+
+```
+touch billboard.py
+```
+
+Enter these contents:
+
+```
+import billboard
+import sys
+
+chart = billboard.ChartData('Hot-Country-Songs', year=2021)
+
+original_stdout = sys.stdout
+
+with open('Hot-Country-Songs-2022.txt', 'w') as f:
+    sys.stdout = f
+    print(chart)
+    sys.stdout = original_stdout
+
+chart2 = billboard.ChartData('Country-Streaming-Songs', year=2022)
+
+original2_stdout = sys.stdout
+
+with open('Country-Streaming-Songs-2022.txt', 'w') as g:
+    sys.stdout = g
+    print(chart2)
+    sys.stdout = original2_stdout
+
+```
+
+`import billboard` imports the billboard api while `import sys` imports various python functions that will help to maintain different aspects of your python runtime environment.
+
+Next, `chart = billbarod.ChartData('Your chosen chart', year=your chosen year')` saves the chart data, artist and song to the variable "chart".
+
+Then
+
+```
+with open('some text file.txt', 'w') as f:
+    sys.stdout = f
+    print(chart)
+    sys.stdout = original_stdout
+```
+
+Here, you've created a new file "some text . . ." and stored it as `f`, and printed the "chart" data to f and saved the chart to "some text file . . .".
+
+It should look something like this:
+
+```
+Country-Streaming-Songs chart (2021)
+------------------------------------
+1. 'Forever After All' by Luke Combs
+2. 'Tennessee Whiskey' by Chris Stapleton
+3. 'Starting Over' by Chris Stapleton
+4. 'Wasted On You' by Morgan Wallen
+5. 'I Hope' by Gabby Barrett
+6. 'Fancy Like' by Walker Hayes
+7. 'Whiskey Glasses' by Morgan Wallen
+```
+
+In my particular case, I ran a number of regex functions in vim so that I would only have the title and name of the song left which I saved as a comma delimited file `csv` like this:
+
+```
+I Hope,Gabby Barrett
+The Bones,Maren Morris
+Heartless,Diplo Presents Thomas Wesley Featuring Morgan Wallen
+One Man Band,Old Dominion
+10000 Hours,Dan + Shay & Justin Bieber
+Tennessee Whiskey,Chris Stapleton
+Whiskey Glasses,Morgan Wallen
+```
+
+Briefly, it should be noted that you can retrieve as many charts as you'd like with this code:
+
+```
+import billboard
+import sys
+
+## chart 1, Hot-Country-Songs year-end 2021
+
+chart = billboard.ChartData('Hot-Country-Songs', year=2021)
+
+original_stdout = sys.stdout
+
+with open('Hot-Country-Songs-2022.txt', 'w') as f:
+    sys.stdout = f
+    print(chart)
+    sys.stdout = original_stdout
+
+## chart 2, Country-Streaming-Songs year-end 2021
+
+chart2 = billboard.ChartData('Country-Streaming-Songs', year=2021)
+
+original2_stdout = sys.stdout
+
+with open('Country-Streaming-Songs-2022.txt', 'w') as g:
+    sys.stdout = g
+    print(chart2)
+    sys.stdout = original2_stdout
+
+```
+
+Each set will save a chart to a new `.txt` file
+
+### Retrieving the Music Lyrics
+
+Retrieving music lyrics, I use [John W. Miller's](https://github.com/johnwmillr) excellent lyrics genuis api which in turn gets the lyrics you want from the website [genuis.com](https://genius.com/). The full instructions or its use can [be found here](https://lyricsgenius.readthedocs.io/en/master/).
+
+Before you use this package, you will need to sign up for an account to get access to the api. An account authorizes your access to the [Genuis Api and can be done here](http://genius.com/api-clients).
+
+First, install the api from your terminal command line:
+
+```
+pip install lyricsgenuis
+```
+
+Or get the latest version from [github](https://github.com/johnwmillr/LyricsGenius)
+
+```
+pip install git+https://github.com/johnwmillr/LyricsGenius.git
+```
+
+For standard usage, see the website above. In my particular case, I had someone help me write this script and currently, as of today, it still works:
+
+```
+# import lyricsgenius
+import lyricsgenius
+# import csv python package of functions for handling csv files
+import csv
+
+# the first line gives you access to lyrics genius
+genius = lyricsgenius.Genius("your api")
+
+# artist and song list
+here = "your-saved-csv.csv"
+# file you will save lyrics to
+there = "new-lyrics-csv-file.csv (or .txt)"
+
+# open new-lyrics-file for writing to
+directionsFile = open(there, "+w")
+
+# open artist song file to read from
+with open(here, "r") as source:
+    reader = csv.reader(source)
+    songartistlist = list(reader)
+
+# Admittedly, it gets a little vague here, but I think that what is happening is that you create two sets of lists to save each of your columns to. The column on the left lists the song titles "songlist = []" while the one on the right lists the artist's name "artistlist = []".
+
+songlist = []
+artistlist = []
+
+# you then save the songartistlist as a variable called "i" each line is listed separately. Create a new variable called "j" where if an item (set of lyrics) is retured, then it is added to your object as a song
+
+for i in songartistlist:
+    count = 0
+    for j in i:
+        if count == 0:
+            songlist.append(j)
+            count += 1
+        else:
+            jsplit = j.split()
+            j = jsplit[0]
+            artistlist.append(j)
+
+# while the additional (once again not utterly clear) will attach the song lyrics to the artist.
+
+count1 = 0
+songlyrics = []
+for k in songartistlist:
+    song = genius.search_song(songlist[count1], artistlist[count1])
+    count1 += -1
+    songlyrics.append(song.lyrics)
+
+# save the lyrics file
+directionsFile.writelines(songlyrics)
+```
+
+## Preparing the Files for Analysis
+
+This section will extensively use Matthew Jocker's book. I've done analysis on similar sets before, but I am anticipating that Jocker's book will help clarify much of what I've attempted in the past.
+
+### Creating the R environment
+
+In the section of Jocker's book (1.5), he asks us to download the materials you would use to do his specific analysis. Instead, we will use the material we've just created.
+
+```{r}
+
+
+# We first set the working directory
+# setwd("/home/redapemusic35/1-2021-22-Projects/Publications/Research-Projects/Music_Corpora/")
+
+directory <- "/home/redapemusic35/1-2021-22-Projects/Publications/Research-Projects/Music_Corpora/Song-Charts/Country-Streaming-Songs-2020-there-3.txt"
+
+# load the first text file using the scan function. I am following Jocker's nomenclature, vectors will be denoted with a .v
+
+# Jockers calls for the scan function but this gave me an error. Found on https://stackoverflow.com/questions/7797395/data-type-error-with-scan/7797830 that I should use 'read.csv' instead.
+
+text.v <- read.csv(directory, sep="\n")
+
+text.v[100:150,]
+
+```
+
+A quick mention is in order here. I cleaned up my original file. Since I am using Neovim, I was able to do this using a series of vim search and replace functions. Namely, there was a series of metadata variables such as `[Verse 1]` `[Intro]` highlighting the various verse blocks of the lyrics. using functions such as `%s /\[.*\]//gc` I was able to search these out can delete them. Further, each new song lyric began with `"last lyric line of previous songEmbedSong title of new song followed byLyric"`. It was pretty ugly. I replaced these lines like this: `%s /.*Embed\zeLyric/\[&\]/gc`. I think that is what I did, if it doesn't work for you, you could always play around with various searches. Just do not close the file so that you can always recover. 
+
+I ended up with a file that began each new song lyric in this way: `[Song Title]`. I made a copy of the file and then deleted all of the song titles in the new copy. Although I no longer have the song title metadata in the file that I am working with, once I figure out how to record the metadata in a variable apart from the file I am working in, I can always do so.
+
+One last change that I needed to make was a similar bit of housekeeping. My master file had a list of songs whose lyrics did not get included. These were not country song lyrics and I think that because of that, my script did not download the lyrics to these songs. I am not sure why they were there.
+
+I now no longer have any metadata to contend with and after an extensive check, I was able to confirm that this is true.
+
+## Reprocessing the Content
+
+```{r}
+# load packages
+
+library(sentimentr)
+library(magrittr)
+library(dplyr)
+
+# lowercase file contents
+lyrics.lower.v <- tolower(text.v)
+
+#split contents into sentences by line
+
+lyric.sentences.l <- strsplit(lyrics.lower.v, "\\]")
+lyric.sentences.l <- unlist(lyric.sentences.l)
+
+not.blanks.v <- which(lyric.sentences.l!="")
+not.blanks.v
+
+
+# look at original 
+lyric.sentences.l <- lyric.sentences.l[not.blanks.v]
+lyric.sentences.l
+
+# separate into words 
+lyric.words.l <- strsplit(lyrics.lower.v, "\\W")
+
+lyric.words.l <- unlist(lyric.words.l)
+
+# delete blank spaces
+not.blanks.v <- which(lyric.words.l!="")
+not.blanks.v[1:10]
+
+# show result for inspection
+
+lyric.words.l <- lyric.words.l[not.blanks.v]
+lyric.words.l[1:100]
+
+# look for individual words
+length(lyric.words.l[which(lyric.words.l=="us")])
+length(lyric.words.l[which(lyric.words.l=="me")])
+length(lyric.words.l[which(lyric.words.l=="you")])
+length(lyric.words.l[which(lyric.words.l=="we")])
+length(lyric.words.l[which(lyric.words.l=="love")])
+length(lyric.words.l[which(lyric.words.l=="i")])
+love.words <- lyric.words.l[which(lyric.words.l=="love")]
+
+love.words
+
+# look for sentences containing certain words
+
+# length(lyric.sentences.l[which(lyric.sentences.l==".*(^love)")])
+
+# more than half the songs contain the word love
+
+length(lyric.sentences.l[grep("love",lyric.sentences.l)])
+
+# is love being used positively or negatively?
+
+love.lyrics <- lyric.sentences.l[grep("love",lyric.sentences.l)]
+love.lyrics
+
+# there are 6 songs wherein the word love is used, they have a negative sentiment
+
+sentiment(love.lyrics)
+```
+
+```{r}
+
+sentiment(love.lyrics)
+
+```
+

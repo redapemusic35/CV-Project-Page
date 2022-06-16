@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>package on Sam&#39;s Emotions</title>
+    <link>/categories/package/</link>
+    <description>Recent content in package on Sam&#39;s Emotions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 23 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/package/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R Markdown</title>
+      <link>/package/rmarkdown/</link>
+      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/package/rmarkdown/</guid>
+      <description>The rmarkdown package is a single package, but &amp;ldquo;R Markdown&amp;rdquo; is the backbone for an ecosystem of packages for creating computational documents in R. In this workshop, we&amp;rsquo;ll use the development version installed from GitHub.
+install.packages(&amp;#34;remotes&amp;#34;) remotes::install_github(&amp;#34;rstudio/rmarkdown&amp;#34;) </description>
+    </item>
+    
+    <item>
+      <title>Distill</title>
+      <link>/package/distill/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/package/distill/</guid>
+      <description>Distill is a package built for R Markdown, an ecosystem of packages for creating computational documents in R. The goal of the Distill package is to provide an output format optimized for online scientific and technical communication. You may install it from CRAN:
+install.packages(&amp;#34;distill&amp;#34;) In this workshop, we&amp;rsquo;ll also use the postcards package to generate a nice &amp;ldquo;about&amp;rdquo; page for your distill website. You may also install it from CRAN:</description>
+    </item>
+    
+    <item>
+      <title>Blogdown</title>
+      <link>/package/blogdown/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/package/blogdown/</guid>
+      <description>The goal of the blogdown package is to provide a powerful and infinitely customizable website output format for R Markdown. You may install it from CRAN:
+install.packages(&amp;#34;blogdown&amp;#34;)  Additional resources        Up &amp;amp; running with blogdown in 2021
+   Unbreak your blogdown site
+   A spoonful of Hugo series
+  </description>
+    </item>
+    
+  </channel>
+</rss>

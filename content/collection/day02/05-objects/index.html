@@ -1,0 +1,97 @@
+---
+title: "R Objects and Commands"
+author: Montaque Reynolds 
+weight: 5
+subtitle: "3 types of R objects, vector, data frame, and matrix."
+date: 2021-01-26
+draft: false
+links:
+- icon: campground
+  icon_pack: fas
+  name: slides
+  url: "/slides/05-why-netlify.html"
+- icon: hiking
+  icon_pack: fas
+  name: activity
+  url: "collection/day02/05-netlify/#activity"
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="vectors" class="section level2">
+<h2>Vectors</h2>
+<p>Contains a set of values. These include <code>vec_num</code>, number vector and <code>vec_char</code> whwhich is a character vector. <code>c()</code> combines the elements of a vector and <code>&lt;-</code> assigns a vector to a variable.</p>
+<pre class="r"><code>vec_num &lt;- c(1, 5, 6, 3)
+vec_num</code></pre>
+<pre><code>## [1] 1 5 6 3</code></pre>
+<pre class="r"><code>vec_char &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;mandarin&quot;, &quot;melon&quot;)
+vec_char</code></pre>
+<pre><code>## [1] &quot;apple&quot;    &quot;banana&quot;   &quot;mandarin&quot; &quot;melon&quot;</code></pre>
+<p>Once we have created a vector, we can extract its elements using the <code>[]</code> operator. For instance, you can extract the first element <code>[1]</code>,</p>
+<pre class="r"><code>vec_char &lt;- c(&quot;apple&quot;, &quot;banana&quot;, &quot;mandarin&quot;, &quot;melon&quot;)
+vec_char[1]</code></pre>
+<pre><code>## [1] &quot;apple&quot;</code></pre>
+<p>or the first 3 elements <code>[1:3]</code>.</p>
+<pre class="r"><code>vec_char[1:3]</code></pre>
+<pre><code>## [1] &quot;apple&quot;    &quot;banana&quot;   &quot;mandarin&quot;</code></pre>
+</div>
+<div id="some-functions" class="section level2">
+<h2>Some functions</h2>
+<div id="arithmetic-multiplication-division-subtraction" class="section level3">
+<h3>Arithmetic, Multiplication, Division, Subtraction</h3>
+<pre class="r"><code>vec_num2 &lt;- vec_num + 2
+vec_num3 &lt;- vec_num / 2
+vec_num4 &lt;- vec_num * 4
+vec_num5 &lt;- vec_num - 1
+
+vec_num</code></pre>
+<pre><code>## [1] 1 5 6 3</code></pre>
+<pre class="r"><code># Addition
+
+vec_num2</code></pre>
+<pre><code>## [1] 3 7 8 5</code></pre>
+<pre class="r"><code># Division
+
+vec_num3</code></pre>
+<pre><code>## [1] 0.5 2.5 3.0 1.5</code></pre>
+<pre class="r"><code># Multiplication
+
+vec_num4</code></pre>
+<pre><code>## [1]  4 20 24 12</code></pre>
+<pre class="r"><code># Subtraction
+
+vec_num5</code></pre>
+<pre><code>## [1] 0 4 5 2</code></pre>
+</div>
+</div>
+<div id="comparing-vectors-using-relational-operators-returns-true-or-false" class="section level2">
+<h2>Comparing vectors using relational operators (returns <code>TRUE</code> or <code>FALSE</code>)</h2>
+<pre class="r"><code>vec_logi_gt5 &lt;- vec_num &gt;= 5
+vec_logi_gt5</code></pre>
+<pre><code>## [1] FALSE  TRUE  TRUE FALSE</code></pre>
+<p>We can do this using the equality operator only on character vectors</p>
+<pre class="r"><code>vec_logi_apple &lt;- vec_char == &quot;apple&quot;
+vec_logi_apple</code></pre>
+<pre><code>## [1]  TRUE FALSE FALSE FALSE</code></pre>
+<p>We can also concatenate vector elements using <code>paste()</code>.</p>
+<pre class="r"><code>vec_char2 &lt;- paste(c(&quot;red&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;green&quot;), vec_char)
+print(vec_char2)</code></pre>
+<pre><code>## [1] &quot;red apple&quot;       &quot;yellow banana&quot;   &quot;orange mandarin&quot; &quot;green melon&quot;</code></pre>
+<p>We can also set names to the elements of a numeric vector</p>
+<pre class="r"><code>names(vec_num) &lt;- vec_char
+print(vec_num)</code></pre>
+<pre><code>##    apple   banana mandarin    melon 
+##        1        5        6        3</code></pre>
+</div>
+<div id="data-frames" class="section level2">
+<h2>Data Frames</h2>
+<p>Data Frames combine multiple vectors to construct a data set. However, though vectors can be of different types, they can only be combined if they have the same lengths.</p>
+<pre class="r"><code>dat_fruit &lt;- data.frame(name = vec_char, count = vec_num)
+print(dat_fruit)</code></pre>
+<pre><code>##              name count
+## apple       apple     1
+## banana     banana     5
+## mandarin mandarin     6
+## melon       melon     3</code></pre>
+</div>

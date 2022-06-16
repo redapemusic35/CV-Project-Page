@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.96.0" />
+<title>Why R Markdown? | Sam&#39;s Emotions</title>
+
+
+<meta property="twitter:site" content="@redapemusic35">
+<meta property="twitter:creator" content="@redapemusic35">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Why use R Markdown to introduce yourself online.">
+
+
+<meta property="og:site_name" content="Sam&#39;s Emotions">
+<meta property="og:title" content="Why R Markdown? | Sam&#39;s Emotions">
+<meta property="og:description" content="Why use R Markdown to introduce yourself online." />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="/collection/day01/02-postcards/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="/collection/day01/sidebar.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="/collection/day01/sidebar.jpg" >
+    
+    
+  <meta itemprop="name" content="Why R Markdown?">
+<meta itemprop="description" content="Why R Markdown?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
+Let’s use the postcards package to make a simple, single “about” page right now, and publish it with GitHub Pages.
+Pre-requisites     First, make sure you have the latest version of the postcards package installed from CRAN:
+install.packages(&#34;postcards&#34;) Restart your R session. If you use RStudio, use the menu item Session &gt; Restart R or the associated keyboard shortcut:"><meta itemprop="datePublished" content="2021-01-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-01-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="543">
+<meta itemprop="keywords" content="" />
+  
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.b2b53637e7df317c1f6797766023f56585f02a9b0dc12e0bdf7170b8b9491456.css" integrity="sha256-srU2N&#43;ffMXwfZ5d2YCP1ZYXwKpsNwS4L33FwuLlJFFY=" media="screen">
+  
+  
+  <script src="/panelset.min.8f4cba0107356728f266d94a12a4d18ef504eda8a9a284cda73675bae7884a68.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.1b189634dc8cb421248223d3b8fb585f121bb3d09a4ced6d27e72c0cd19119ce.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container single-series">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="/" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Sam&#39;s Emotions">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About SAM">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/project/" title="Project Portfolio">Projects</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/collection/" title="Courses">Courses</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+<main class="page-main ph4 pt4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 pr3-l">
+      <header class="post-header">
+        <h4 class="breadcrumb pb5">
+
+  
+    
+      
+  
+    
+      
+  
+    
+      
+  
+
+    
+    
+      <a href="/collection/">The Tutor House</a>
+    
+  
+
+    
+    
+      <a href="/collection/day01/">Day 01</a>
+    
+  
+
+    
+    
+      Why R Markdown?
+    
+  
+
+</h4>
+
+
+
+
+        
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Why R Markdown?</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Why use R Markdown to introduce yourself online.</h4>
+        <p class="f6 measure lh-copy mv1">By Monty Reynolds</p>
+        <p class="f7 db mv0 ttu">January 25, 2021</p>
+        
+        
+      
+      <div class="ph0 pt5">
+        
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="/slides/02-why-rmd.html" ><i class="fas fa-campground fa-lg fa-fw mr2"></i>slides</a>
+
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="/collection/day01/02-postcards/#activity" ><i class="fas fa-hiking fa-lg fa-fw mr2"></i>activity</a>
+
+
+      </div>
+      
+        
+      </header>
+      <section class="post-body pt5 pb4">
+        <script src="/collection/day01/02-postcards/index_files/fitvids/fitvids.min.js"></script>
+
+
+
+
+<h2 id="why-r-markdown">Why R Markdown?
+  <a href="#why-r-markdown"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<div class="shareagain" style="min-width:300px;margin:1em auto;">
+<iframe src="/slides/02-why-rmd.html" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+
+
+
+
+<h2 id="activity">Activity
+  <a href="#activity"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h2>
+<p>TIME: ⏱ 10 minutes</p>
+<p>Let’s use the postcards package to make a simple, single “about” page right now, and publish it with GitHub Pages.</p>
+
+
+
+
+<h3 id="pre-requisites">Pre-requisites
+  <a href="#pre-requisites"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>First, make sure you have the latest version of the postcards package installed from CRAN:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">install.packages</span>(<span style="color:#d14">&#34;postcards&#34;</span>)
+</span></span></code></pre></div><p>Restart your R session. If you use RStudio, use the menu item <em>Session &gt; Restart R</em> or the associated keyboard shortcut:</p>
+<ul>
+<li><kbd>Ctrl + Shift + F10</kbd> (Windows and Linux) or</li>
+<li><kbd>Command + Shift + F10<kbd> (Mac OS).</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">packageVersion</span>(<span style="color:#d14">&#34;postcards&#34;</span>)
+</span></span><span style="display:flex;"><span>[1] ‘<span style="color:#099">0.2.0</span>’
+</span></span></code></pre></div>
+
+
+
+<h3 id="create-github-repo">Create GitHub repo
+  <a href="#create-github-repo"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>We’ll follow a 
+<a href="https://happygitwithr.com/new-github-first.html" target="_blank" rel="noopener">“New Project, GitHub first”</a> workflow.</p>
+<p>Go online to your GitHub account, and create a new repository and <strong>YES</strong> initialize this repository by adding a <code>README</code> file.</p>
+
+
+
+
+<h3 id="clone-github-repo">Clone GitHub repo
+  <a href="#clone-github-repo"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>We just created the remote repository on GitHub. To make a local copy on our computer that we can actually work in, we’ll clone that repository into a new RStudio project. This will allow us to sync between the two locations: your remote (the one you see on github.com) and your local desktop.</p>
+<p>Use the RStudio IDE project wizard:</p>
+<ol>
+<li>
+<p>Open up RStudio to create a new project where your website’s files will live.</p>
+</li>
+<li>
+<p>Click <code>File &gt; New Project &gt; Version Control &gt; Git</code>.</p>
+</li>
+<li>
+<p>Paste the URL from GitHub (either HTTPS or SSH).</p>
+</li>
+<li>
+<p>Be intentional about where you tell RStudio to create this new Project on your workstation.</p>
+</li>
+<li>
+<p>Click Create Project.</p>
+</li>
+</ol>
+<p><strong>Alternatively</strong>, do this (but note that it requires a 
+<a href="https://happygitwithr.com/credential-caching.html#get-a-pat" target="_blank" rel="noopener">GitHub personal access token</a>):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>usethis<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">create_from_github</span>(<span style="color:#d14">&#34;apreshill/iyo-postcard&#34;</span>, 
+</span></span><span style="display:flex;"><span>                            destdir <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;/Users/alison/rscratch&#34;</span>)
+</span></span></code></pre></div>
+
+
+
+<h3 id="first-commit--push">First commit &amp; push
+  <a href="#first-commit--push"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p><strong>Everyone - all together now!</strong></p>
+<p>Use the RStudio IDE to commit and push these files:</p>
+<ul>
+<li>
+<p><code>*.Rproj</code></p>
+</li>
+<li>
+<p><code>.gitignore</code></p>
+</li>
+</ul>
+
+
+
+
+<h3 id="create-a-postcard">Create a postcard
+  <a href="#create-a-postcard"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Inside your current postcards project, use the R console:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">library</span>(postcards)
+</span></span></code></pre></div><p>Then you could run (wait- don’t do this yet!):</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">create_postcard</span>()
+</span></span></code></pre></div><p>But you could also pick one of four templates:</p>
+<ol>
+<li>
+<p><code>&quot;jolla&quot;</code> (
+<a href="https://seankross.com/postcards-templates/jolla/" target="_blank" rel="noopener">https://seankross.com/postcards-templates/jolla/</a>) [the default]</p>
+</li>
+<li>
+<p><code>&quot;jolla-blue&quot;</code> (
+<a href="https://seankross.com/postcards-templates/jolla-blue/" target="_blank" rel="noopener">https://seankross.com/postcards-templates/jolla-blue/</a>)</p>
+</li>
+<li>
+<p><code>&quot;trestles&quot;</code> (
+<a href="https://seankross.com/postcards-templates/trestles/" target="_blank" rel="noopener">https://seankross.com/postcards-templates/trestles/</a>)</p>
+</li>
+<li>
+<p><code>&quot;onofre&quot;</code> (
+<a href="https://seankross.com/postcards-templates/onofre/" target="_blank" rel="noopener">https://seankross.com/postcards-templates/onofre/</a>)</p>
+</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#900;font-weight:bold">create_postcard</span>(template <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;jolla&#34;</span>) <span style="color:#998;font-style:italic">#default</span>
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">create_postcard</span>(template <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;jolla-blue&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">create_postcard</span>(template <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;trestles&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#900;font-weight:bold">create_postcard</span>(template <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;onofre&#34;</span>)
+</span></span></code></pre></div><aside>
+Want to know more? Under the hood, these are R Markdown templates, which you can include in a package.
+</aside>
+
+
+
+
+<h3 id="anatomy-of-a-postcard">Anatomy of a postcard
+  <a href="#anatomy-of-a-postcard"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>YAML, body, name is index- this is special</p>
+<p>In your YAML, note:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#000080">output</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">  </span>postcards::trestles<span style="color:#bbb">
+</span></span></span></code></pre></div><p>This is your output format! More generally, <code>&lt;package&gt;::&lt;template&gt;</code>. When you knit 🧶 (next section), the RStudio IDE detects this YAML key and knits to the appropriate output format.</p>
+<p>✨ Commit &amp; Push! ✨</p>
+<p>You should be committing these files:</p>
+<ul>
+<li>
+<p><code>index.Rmd</code></p>
+</li>
+<li>
+<p><code>*.jpg</code></p>
+</li>
+</ul>
+<p>But! There is no <code>.html</code> file (yet…)</p>
+
+
+
+
+<h3 id="knit-the-postcard">Knit the postcard
+  <a href="#knit-the-postcard"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Knit button 🧶, or:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span>rmarkdown<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">render</span>(<span style="color:#d14">&#34;index.Rmd&#34;</span>)
+</span></span></code></pre></div><p>What is new in your Git pane?</p>
+<p>✨ Commit &amp; Push! ✨</p>
+<p>You should be committing this files:</p>
+<ul>
+<li><code>index.html</code></li>
+</ul>
+<p>(You may get a warning in RStudio IDE that this file is too big- go right ahead)</p>
+
+
+
+
+<h3 id="edit-your-postcard">Edit your postcard
+  <a href="#edit-your-postcard"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Social &amp; other links go in the YAML, some templates (like <code>trestles</code>) have content in the body.</p>
+
+
+
+
+<h3 id="publish-a-postcard">Publish a postcard
+  <a href="#publish-a-postcard"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Easy:</p>
+<ul>
+<li>Publish to GitHub Pages via github.com:</li>
+</ul>
+<p>
+<a href="https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site" target="_blank" rel="noopener">https://docs.github.com/en/github/working-with-github-pages/creating-a-github-pages-site#creating-your-site</a></p>
+<p>Medium:</p>
+<ul>
+<li>Use the <code>usethis</code> package to configure GitHub Pages from R:</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-r" data-lang="r"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&gt;</span> usethis<span style="color:#000;font-weight:bold">::</span><span style="color:#900;font-weight:bold">use_github_pages</span>(branch <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;main&#34;</span>, path <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;/&#34;</span>)
+</span></span><span style="display:flex;"><span>✓ Setting active project to <span style="color:#d14">&#39;/Users/alison/rscratch/iyo-postcard&#39;</span>
+</span></span><span style="display:flex;"><span>✓ Activating GitHub Pages for <span style="color:#d14">&#39;apreshill/iyo-postcard&#39;</span>
+</span></span><span style="display:flex;"><span>✓ GitHub Pages is publishing from<span style="color:#000;font-weight:bold">:</span>
+</span></span><span style="display:flex;"><span>● URL<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;https://apreshill.github.io/iyo-postcard/&#39;</span>
+</span></span><span style="display:flex;"><span>● Branch<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;main&#39;</span>
+</span></span><span style="display:flex;"><span>● Path<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;/&#39;</span>
+</span></span></code></pre></div>
+
+
+
+<h3 id="share-your-postcard">Share your postcard!
+  <a href="#share-your-postcard"><svg class="anchor-symbol" aria-hidden="true" height="26" width="26" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="currentColor"></path>
+      <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76.0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71.0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71.0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76.0 5-2.24 5-5s-2.24-5-5-5z"></path>
+    </svg></a>
+</h3>
+<p>Add it to your repository details ❤️</p>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="/collection/day01/03-distill/">Why R? &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+  </section>
+</main>
+
+<aside class="page-sidebar" role="complementary">
+                         
+ 
+
+
+
+
+
+
+
+
+
+
+
+  <img src="/collection/day01/sidebar.jpg" class="db ma0">
+
+                         
+ 
+
+
+
+<div class="flex items-start sticky ph4 pb4 flex-row">
+  <div class="w-two-thirds w-50-l ph0">
+    <h2 class="mv3 f5 fw7 ttu tracked">
+      <a class="no-underline dim" href="/collection/">Outline</a></h2>
+    <nav id="SectionTableOfContents" aria-label="SectionTableOfContents">
+        <ul>
+        
+          
+          
+          <li class="" hugo-nav="/collection/prework/">
+            <a href="/collection/prework/">Prework</a></li>
+          
+          </li>
+        
+          
+          
+          
+          <details open class="active">
+            <summary class="active" hugo-nav="/collection/day01/"><a href="/collection/day01/">Day 01</a></summary>
+            
+              
+              <li class="active" hugo-nav="/collection/day01/02-postcards/"><a href="/collection/day01/02-postcards/">Why R Markdown?</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/day01/03-distill/"><a href="/collection/day01/03-distill/">Why R?</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/day01/04-blog/"><a href="/collection/day01/04-blog/">Why blog?</a></li>
+            
+          </details>
+          
+          </li>
+        
+          
+          
+          
+          <details  class="">
+            <summary class="" hugo-nav="/collection/day02/"><a href="/collection/day02/">Day 02</a></summary>
+            
+              
+              <li class="" hugo-nav="/collection/day02/05-netlify/"><a href="/collection/day02/05-netlify/">Why Netlify?</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/day02/06-hugo/"><a href="/collection/day02/06-hugo/">Why Hugo?</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/day02/07-apero/"><a href="/collection/day02/07-apero/">Why Hugo Apéro?</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/day02/08-blogdown/"><a href="/collection/day02/08-blogdown/">Why blogdown?</a></li>
+            
+          </details>
+          
+          </li>
+        
+          
+          
+          
+          <details  class="">
+            <summary class="" hugo-nav="/collection/corpus-analytics/"><a href="/collection/corpus-analytics/">The Music of the Moral Emotions</a></summary>
+            
+              
+              <li class="" hugo-nav="/collection/corpus-analytics/01-preliminaries/"><a href="/collection/corpus-analytics/01-preliminaries/">Part I. Preliminaries.</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/corpus-analytics/02-selection-and-representation/"><a href="/collection/corpus-analytics/02-selection-and-representation/">Part II</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/corpus-analytics/03-discovery/"><a href="/collection/corpus-analytics/03-discovery/">Part III</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/corpus-analytics/04-measurement/"><a href="/collection/corpus-analytics/04-measurement/">Part IV</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/corpus-analytics/05-inference/"><a href="/collection/corpus-analytics/05-inference/">Part V</a></li>
+            
+              
+              <li class="" hugo-nav="/collection/corpus-analytics/06-conclusion/"><a href="/collection/corpus-analytics/06-conclusion/">Part VI</a></li>
+            
+          </details>
+          
+          </li>
+        
+        </ul>
+    </nav>
+  </div>
+  <details id="PageTableOfContents">
+    <summary><h2 class="mv0 f5 fw7 ttu tracked dib">On this page<h2></summary>
+    <div class="pl2 pr0 mh0">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-r-markdown">Why R Markdown?</a></li>
+    <li><a href="#activity">Activity</a></li>
+  </ul>
+</nav>
+    </div>
+  </details>
+  
+</div>
+
+</aside>
+
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2022 M-Reynol, STL
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/redapemusic35/CV-Project-Page" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.facebook.com/hashtag/ap%C3%A9ro" title="facebook-square" target="_blank" rel="noopener">
+      <i class="fab fa-facebook-square fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://www.instagram.com/explore/tags/apero/" title="instagram" target="_blank" rel="noopener">
+      <i class="fab fa-instagram fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/hashtag/ap%c3%a9ro" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://impactstory.org/u/0000-0002-8082-1890" title="impactstory" target="_blank" rel="noopener">
+      <i class="ai ai-impactstory fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="http://orcid.org/0000-0002-8082-1890" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="/blog/index.xml" title="rss" >
+      <i class="fas fa-rss fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+      <a class="dib pv1 ph2 link" href="/contributors/" title="Contributors">Contributors</a>
+      
+    </div>
+  </nav>
+  
+    <script>
+
+    var i, text, code, codes = document.getElementsByTagName('code');
+    for (let i = 0; i < codes.length;) {
+      code = codes[i];
+      if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, '\\(').replace(/\$$/, '\\)');
+          code.textContent = text;
+        }
+        if (/^\\\((.|\s)+\\\)$/.test(text) ||
+            /^\\\[(.|\s)+\\\]$/.test(text) ||
+            /^\$(.|\s)+\$$/.test(text) ||
+            /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+          code.outerHTML = code.innerHTML;  
+          continue;
+        }
+      }
+      i++;
+    }
+</script>
+
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+    
+  
+  
+</footer>
+
+      </div>
+    </body>
+</html>

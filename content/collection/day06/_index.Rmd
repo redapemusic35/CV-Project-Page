@@ -1,0 +1,15 @@
+---
+title: "Day 06"
+weight: 7
+subtitle: "Notes from 'R for Data Science'."
+description: |
+    Notes from the book "R for Data Science"
+bibliography: "/home/redapemusic35/1-2021-22-Projects/references.bib"
+cascade:
+    draft: false
+    # list or single layouts are possible
+    layout: single-series # list, list-sidebar, single-series
+    date: 2022-06-15
+---
+
+A collection of notes by chapter, from the book [R for Data Science](https://r4ds.had.co.nz/index.html).

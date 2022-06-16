@@ -1,0 +1,149 @@
+---
+title: "eMFD and More Hearts"
+weight: 2
+subtitle: "A survey of Jonathan Haidt's Moral Foundation Theory and popular music."
+excerpt: "Of course a big plus is you can put your data science and R programming skills online, but also: you can use RStudio, and you can use tools that can help you improve your real work workflows."
+bibliography: "/home/redapemusic35/1-2021-22-Projects/references.bib"
+links:
+- icon: campground
+  icon_pack: fas
+  name: slides
+  url: "/slides/02-why-rmd.html"
+- icon: hiking
+  icon_pack: fas
+  name: activity
+  url: "collection/day01/02-postcards/#activity"
+---
+
+Once again, the purpose of this post is primarily for my own recollection. Here I will be using @hopp21 [extended moral foundations dictionary](https://github.com/medianeuroscience/emfdscore)^[Also, see for instructions.] on the song *More Hearts than Mine* by Ingrid Andress. I've done other forms of sentiment analysis on this song in the past and I have never been too comfortable with the results. I think that this ought to be expected seeing as how this song does a great job in exploring the conflicting emotions someone might have in introducing a romantic interest to other relationships that one has a more extensive history with.
+
+First, following the very clear tutorial that the github page for the excellent tutorial that is provided,^[[eMFD](https://github.com/medianeuroscience/emfdscore/blob/master/eMFDscore_Tutorial.ipynb)] we import the following python packages which includes pandas, numpy, seaborn, the style package "whitegrid", and the plot library "matplotlib". If you do not already have any of these packages installed, you should do so: `pip install PACKAGE`. We then set our fonts, style and import the documents that we will initially emfd on. Finally, we import our first set of documents. These consist of a number of news articles provided if you decided to clone the github repository linked to above.
+
+```
+
+
+import pandas as pd
+import numpy as np
+import seaborn as sns
+sns.set_style("whitegrid")
+from matplotlib import pyplot as plt
+plt.style.use('seaborn-paper')
+
+sns.set(font_scale=1.2)
+sns.set_style('whitegrid')
+template_input = pd.read_csv("/home/redapemusic35/1-2021-22-Projects/Publications/Research-Projects/eMFD/emfdscore/emfdscore/template_input.csv", header=None)
+template_input.head()
+```
+
+Our initial document file is displayed below. It consists of a number of news articles in a csv file with one document per row.
+
+```{r}
+library(readr)
+
+articles <- read.csv("~/1-2021-22-Projects/Publications/Research-Projects/eMFD/emfdscore/emfdscore/template_input.csv")
+
+head(articles)
+
+```
+
+The code below will be used to score these documents:
+
+```
+from emfdscore.scoring import score_docs 
+
+num_docs = len(template_input)
+
+DICT_TYPE = 'emfd'
+PROB_MAP = 'all'
+SCORE_METHOD = 'bow'
+OUT_METRICS = 'sentiment'
+OUT_CSV_PATH = 'all-sent.csv'
+
+df = score_docs(template_input,DICT_TYPE,PROB_MAP,SCORE_METHOD,OUT_METRICS,num_docs)
+df.to_csv(OUT_CSV_PATH, index=False)
+
+```
+
+They run the following analysis:
+
+```
+
+    [INPUT_FILE]: = The path to a CSV file in which the first column contains the document texts to be scored.
+    Each row should reflect its own document. See the template_input.csv for an example file format.
+
+    [OUTPUT_FILE] = Specifies the file name of the generated output csv.
+
+    [SCORING_METHOD] = Currently, eMFDscore employs three different scoring algorithms:
+        bow is a classical Bag-of-Words approach in which the algorithm simply searches for word matches between document texts and the specified dictionary.
+        pat (in development) relies on named entity recognition and syntactic dependency parsing. For each document, the algorithm first extracts all mentioned entities.
+        Next, for each entitiy, eMFDscore extracts words that pertain to 1) moral verbs for which the entity is an agent argument (Agent verbs), 2) moral verbs for
+        which the entity is the patient, theme, or other argument (Patient verbs), and other moral attributes (i.e., adjectival modifiers, appositives, etc.).
+        wordlist is a simple scoring algorithm that lets users examine the moral content of individual words. This scoring method expects a CSV where each row corresponds
+        to a unique word. Note: The wordlist scoring algorithm does not perform any tokenization or preprocessing on the wordlists.
+        For a more fine-grained moral content extraction, users are encouraged to use either the bow or path methodology. Furthermore, only the emfd is currenlty supported for PAT extraction.
+        Additionally, this method is more computationally expensive and thus has a longer execution time.
+        gdelt.ngrams is designed for the Global Database of Events, Language, and Tone Television Ngram dataset.
+        This scoring method expects a unigram (1gram) input text file from GDELT and will score each unprocessed (untokenized) unigram with the eMFD.
+
+    [DICTIONARY_TYPE] = Declares which dictionary is applied to score documents. In its current version, eMFDscore lets users choose between three dictionaries:
+        emfd = extended Moral Foundations Dictionary (eMFD)
+        mfd2 = Moral Foundations Dicitonary 2.0 (Frimer et al., 2017; https://osf.io/xakyw/ )
+        mfd = original Moral Foundations Dictionary (https://moralfoundations.org/othermaterials)
+
+    When choosing the eMFD; the following two additional flags need to be defined:
+
+        [PROB_MAP]: How are the foundation probabilities mapped when scoring a document?
+            all : use all probabilities per word in the eMFD
+            single: Assign a single probability to each word in the eMFD according to the foundation with the highest probability
+
+        [OUTPUT_METRICS]: Which metrics are returned?
+            sentiment: Return the average sentiment for each foundation
+            vice-virtue: Split foundations into a vice-virtue category
+
+```
+
+Doing this returns another csv file:
+
+```{r}
+sents <- read.csv("./../../../../../all-sent.csv")
+
+```
+
+What this is, is a file containing scored documents. In this case, these scores are weighted according to the probability that the words found in that document would be associated with one of five moral foundations:^[See @grah11]
+
+```{r}
+
+head(sents)
+```
+
+
+As we can see, on average, the words in document number 1 have a probability of belonging to the care/harm moral foundation of `0.13548848` while document 2 0.11271369.
+
+```{r}
+care <- sents$care_p[1:6]
+care
+
+```
+
+Below is a barplot showing the probability at which the average words in document 1 through 6 have of belonging to each of the five moral foundations:
+
+```{r}
+
+fairness_p <- sents$fairness_p[1:6]
+
+loyalty_p <- sents$loyalty_p[1:6]
+
+authority_p <- sents$authority_p[1:6]
+
+sanctity_p <- sents$sanctity_p[1:6]
+
+moral_d <- data.frame(care,fairness_p,loyalty_p,authority_p,sanctity_p)
+barplot(t(as.matrix(moral_d)), names.arg= c("doc 1", "doc 2", "doc 3", "doc 4", "doc 5", "doc 6"), beside = TRUE, col = c("pink", "blue", "green",  "red", "purple"))
+
+legend(x = "bottomright", col = c("pink", "blue", "green",  "red", "purple"), lty = c(1,2,3,4,5), legend=c("care", "fairness", "loyalty", "authority", "sanctity"))
+
+
+
+```
+
+# References

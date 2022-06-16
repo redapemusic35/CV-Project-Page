@@ -1,0 +1,132 @@
+---
+date: "202-04-04"
+draft: false
+excerpt: Top this and top that, everyone wants to be the best.
+links:
+- icon: door-open
+  icon_pack: fas
+  name: website
+  url: https://bakeoff.netlify.com/
+- icon: github
+  icon_pack: fab
+  name: code
+  url: https://github.com/apreshill/bakeoff
+subtitle: Retrieve Billboard music chart data 
+title: Music Chart Data 
+weight: 1
+---
+
+There is an excellent little bit of code [over at](https://github.com/guoguo12/billboard-charts) written by Allen Guo which will retrieve song charts from Billboard.com. It used to be the case that you could also retrieve a list of all the charts as well but it looks as though the code on the website has been changed. 
+
+You can install billboard.py `pip install billboard.py` 
+
+Once installed, download a particular billboard chart: 
+
+```
+>>> import billboard
+>>> chart = billboard.ChartData('hot-100')
+>>> chart.title
+```
+
+You then can look for songs in various positions on the chart:
+
+```
+
+>>> song = chart[0] # for the song in the first position
+>>> song.title
+'Song'
+>>> song.artist
+'Artist'
+```
+
+For my purposes, which I assure you are noble, I print the entire chart:
+
+```
+
+>>> print(chart)
+hot-100 chart from 2018-04-28
+-----------------------------
+1. 'Nice For What' by Drake
+2. 'God's Plan' by Drake
+3. 'Meant To Be' by Bebe Rexha & Florida Georgia Line
+4. 'Psycho' by Post Malone Featuring Ty Dolla $ign
+5. 'The Middle' by Zedd, Maren Morris & Grey
+# ...
+```
+
+Like I said, you can no longer download a list of all the available charts but that's okay, just go [for charts grouped by category](https://www.billboard.com/charts/) and [here for year end charts](https://www.billboard.com/charts/year-end/).
+
+Below is an example of a script I constructed to get the charts I want:
+
+```{python}
+
+import billboard # import billboard.py
+import sys # to print to a file
+
+# Artists 100 (name of the chart I want)
+
+topartists = billboard.ChartData('top-artists', year=2021) # top artists chart for year-ending in 2021
+
+original_stdout = sys.stdout # to display output
+
+# with a txt file opened, we print the chart we want to it
+with open('/home/redapemusic35/1-2021-22-Projects/Publications/Research-Projects/Music_Corpora/songs-2021/artists-100-2021.txt', 'w') as f:
+    sys.stdout = f
+    print(topartists)
+    sys.stdout = original_stdout
+
+# Do this again for country streaming songs
+# Country Streaming
+
+countrystream = billboard.ChartData('Country-Streaming-Songs', year=2021)
+
+original2_stdout = sys.stdout
+
+with open('/home/redapemusic35/1-2021-22-Projects/Publications/Research-Projects/Music_Corpora/songs-2021/Country-Streaming-Songs-2022.txt', 'w') as g:
+    sys.stdout = g
+    print(countrystream)
+
+    sys.stdout = original2_stdout
+
+# and hot 100 charts
+
+# Hot 100
+
+hot100 = billboard.ChartData('hot-100-songs', year=2021)
+
+original3_stdout = sys.stdout
+
+with open('/home/redapemusic35/1-2021-22-Projects/Publications/Research-Projects/Music_Corpora/songs-2021/hot-100.txt', 'w') as g:
+    sys.stdout = g
+    print(hot100)
+    sys.stdout = original3_stdout
+
+# and songs which were popular on the radio in 2021
+# Radio Songs 
+
+radiosongs = billboard.ChartData('radio-songs', year=2021)
+
+original3_stdout = sys.stdout
+
+with open('/home/redapemusic35/1-2021-22-Projects/Publications/Research-Projects/Music_Corpora/songs-2021/radio-songs-2021.txt', 'w') as g:
+    sys.stdout = g
+    print(radiosongs)
+    sys.stdout = original3_stdout
+
+```
+
+We end up with four separate files which look something like this:
+
+```
+hot-100-songs chart (2021)
+--------------------------
+1. 'Levitating' by Dua Lipa
+2. 'Save Your Tears' by The Weeknd & Ariana Grande
+3. 'Blinding Lights' by The Weeknd
+4. 'Mood' by 24kGoldn Featuring iann dior
+5. 'Good 4 U' by Olivia Rodrigo
+6. 'Kiss Me More' by Doja Cat Featuring SZA
+
+```
+
+I then delete everything but title and artist name separated by a comma. This is easy to do using vim search and replace functions `%s /\[0-9]\.\ \'`, `%s /\'\ by\ \ze[A-Z]`. You might have to do a little bit of clean up, say if a song starts with a lower case letter, but over all, it saves a ton of time. However, the method I have been attempting recently, uses just the artist name and then returns a number of their most popular songs, you can choose how many. This will be in the next post. 

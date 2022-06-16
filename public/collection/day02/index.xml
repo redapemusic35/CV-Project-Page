@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Day 02 on Sam&#39;s Emotions</title>
+    <link>/collection/day02/</link>
+    <description>Recent content in Day 02 on Sam&#39;s Emotions</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/collection/day02/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why Netlify?</title>
+      <link>/collection/day02/05-netlify/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/day02/05-netlify/</guid>
+      <description>Why Netlify?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
+Go to this repo: https://github.com/apreshill/iyo-apero
+Click on the “Deploy to Netlify” button 🚀
+Clone GitHub repo     We just created:
+ a full blogdown project… containing a Hugo site… deployed to Netlify… in a remote repository on YOUR GitHub (i.e., https://github.com/&amp;lt;you&amp;gt;/iyo-apero; you may have changed the repo name after clicking on the “Deploy to Netlify” button).</description>
+    </item>
+    
+    <item>
+      <title>Why Hugo?</title>
+      <link>/collection/day02/06-hugo/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/day02/06-hugo/</guid>
+      <description>Why Hugo?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
+Let’s use this time to configure your new Hugo site.
+Site configuration     Edit your config.toml file. This is your basic Hugo site configuration file. It is not quite YAML- it is written in TOML, which means we have key = value instead of key: value pairs.</description>
+    </item>
+    
+    <item>
+      <title>Why Hugo Apéro?</title>
+      <link>/collection/day02/07-apero/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/day02/07-apero/</guid>
+      <description>Why Hugo Apéro?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
+Let’s get started customizing your home and “about” pages.
+Make your home page     Open up content/_index.md and edit the frontmatter only.
+It is important that you keep this file name. In Hugo, the home page is special- it gets special treatment. You can read more here: https://gohugo.</description>
+    </item>
+    
+    <item>
+      <title>Why blogdown?</title>
+      <link>/collection/day02/08-blogdown/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/day02/08-blogdown/</guid>
+      <description> Why blogdown?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
+Choose your own adventure! You may:
+ Run through the blogdown checks, following: https://alison.rbind.io/post/2020-12-27-blogdown-checks/  </description>
+    </item>
+    
+  </channel>
+</rss>
