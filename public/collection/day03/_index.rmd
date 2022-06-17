@@ -1,10 +1,10 @@
 ---
-title: "The Music of the Moral Emotions"
+title: "Day 03"
 weight: 4
 subtitle: "Analyzing moral content in messages, narratives, and other forms of public discourse."
 description: |
   This is the resources page for a digital humanities course on corpus analytics for philosophers. Analyzing moral content in messages, narratives, and other forms of public discourse.
-bibliography: "~/1-2021-22-Projects/references.bib"
+bibliography: "/home/redapemusic35/1-2021-22-Projects/references.bib"
 cascade:
   draft: false
   # list or single layouts are possible

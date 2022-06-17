@@ -27,28 +27,5 @@ R and RStudio     There are at least two different kinds of environments that yo
       <description>Once again, the purpose of this post is primarily for my own recollection. Here I will be using Hopp et al. (2021) extended moral foundations dictionary1 on the song More Hearts than Mine by Ingrid Andress. I’ve done other forms of sentiment analysis on this song in the past and I have never been too comfortable with the results. I think that this ought to be expected seeing as how this song does a great job in exploring the conflicting emotions someone might have in introducing a romantic interest to other relationships that one has a more extensive history with.</description>
     </item>
     
-    <item>
-      <title>Why R?</title>
-      <link>/collection/day01/03-sentimentr/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/collection/day01/03-sentimentr/</guid>
-      <description>Why R?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
-Pre-requisites     First, make sure you have the latest version of the distill package installed from CRAN:
-install.packages(&amp;#34;distill&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
- Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).</description>
-    </item>
-    
-    <item>
-      <title>Quanteda Dictionaries</title>
-      <link>/collection/day01/04-quanteda/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/collection/day01/04-quanteda/</guid>
-      <description>Quanteda Dictionaries   Next, we will install the quanteda textual analysis set of packages.
-These include:
- quanteda: contains all of the core natural language processing and textual data management functions quanteda.textmodels: contains all of the text models and supporting functions, namely the textmodel_*() functions. This was split from the main package with the v2 release quanteda.textstats: statistics for textual data, namely the textstat_*() functions, split with the v3 release quanteda.</description>
-    </item>
-    
   </channel>
 </rss>

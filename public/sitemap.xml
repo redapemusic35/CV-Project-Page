@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/collection/day05/001/</loc>
+    <lastmod>2022-06-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/blog/lewis-series/01-truth-fiction-1978/</loc>
     <lastmod>2021-10-08T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/collection/day01/01-rcountry/</loc>
     <lastmod>2021-01-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/collection/day00/</loc>
-    <lastmod>2021-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/package/rmarkdown/</loc>
     <lastmod>2021-01-23T00:00:00+00:00</lastmod>
@@ -20,9 +20,12 @@
     <loc>/blog/spoonful-series/01-spoonful/</loc>
     <lastmod>2021-01-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/collection/day03/01-preliminaries/</loc>
+    <loc>/collection/day03/009-preliminaries/</loc>
   </url><url>
-    <loc>/collection/day03/02-selection-and-representation/</loc>
+    <loc>/collection/day05/002/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/collection/day03/010-selection-and-representation/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/collection/day01/</loc>
@@ -43,11 +46,11 @@
     <loc>/blog/lewis-series/02-spoonful/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>/collection/day05/003/</loc>
+    <lastmod>2022-04-14T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/collection/day02/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/collection/day01/03-sentimentr/</loc>
-    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/package/blogdown/</loc>
     <lastmod>2021-01-18T00:00:00+00:00</lastmod>
@@ -61,14 +64,14 @@
     <loc>/blog/sam-series/03-sam-mary/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/collection/day03/03-discovery/</loc>
+    <loc>/collection/day03/011-discovery/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/collection/day03/04-measurement/</loc>
+    <loc>/collection/day03/012-measurement/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/collection/day01/04-quanteda/</loc>
-    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+    <loc>/collection/day02/04-packages/</loc>
+    <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/collection/day03/</loc>
     <lastmod>2021-01-25T00:00:00+00:00</lastmod>
@@ -79,10 +82,10 @@
     <loc>/blog/sam-series/04-sam-hero/</loc>
     <lastmod>2021-01-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/collection/day03/05-inference/</loc>
+    <loc>/collection/day03/013-inference/</loc>
     <lastmod>2022-04-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/collection/day02/05-netlify/</loc>
+    <loc>/collection/day02/05-objects/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/collection/day04/</loc>
@@ -90,8 +93,14 @@
     <loc>/collection/day02/06-hugo/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/collection/day03/06-conclusion/</loc>
+    <loc>/collection/day05/</loc>
     <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/collection/day03/014-conclusion/</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/collection/day06/</loc>
+    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/collection/day02/07-apero/</loc>
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
@@ -100,10 +109,10 @@
     <lastmod>2021-01-26T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/collection/</loc>
-    <lastmod>2022-04-04T00:00:00+00:00</lastmod>
+    <lastmod>2022-06-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
     <lastmod>2022-01-18T00:00:00+00:00</lastmod>

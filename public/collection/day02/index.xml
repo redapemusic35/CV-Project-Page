@@ -8,16 +8,22 @@
     <language>en</language>
     <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="/collection/day02/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Why Netlify?</title>
-      <link>/collection/day02/05-netlify/</link>
+      <title>Quanteda Dictionaries</title>
+      <link>/collection/day02/04-packages/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day02/05-netlify/</guid>
-      <description>Why Netlify?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
-Go to this repo: https://github.com/apreshill/iyo-apero
-Click on the “Deploy to Netlify” button 🚀
-Clone GitHub repo     We just created:
- a full blogdown project… containing a Hugo site… deployed to Netlify… in a remote repository on YOUR GitHub (i.e., https://github.com/&amp;lt;you&amp;gt;/iyo-apero; you may have changed the repo name after clicking on the “Deploy to Netlify” button).</description>
+      <guid>/collection/day02/04-packages/</guid>
+      <description>This post started as an exploration of different types of sentiment analysis. However, I ran into some issues using quanteda. Because of these issues, it occurred to me that I should probably do a post on Quanteda. Therefore, this is now a post using quanteda for text analysis, including sentiment analysis. It should be stated here, that I am largely following the tutorial at quanteda’s home page. Please go there to follow the tutorial because it is possible for some functions to change.</description>
+    </item>
+    
+    <item>
+      <title>R Objects and Commands</title>
+      <link>/collection/day02/05-objects/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/day02/05-objects/</guid>
+      <description>Vectors Contains a set of values. These include vec_num, number vector and vec_char whwhich is a character vector. c() combines the elements of a vector and &amp;lt;- assigns a vector to a variable.
+vec_num &amp;lt;- c(1, 5, 6, 3) vec_num ## [1] 1 5 6 3 vec_char &amp;lt;- c(&amp;quot;apple&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;mandarin&amp;quot;, &amp;quot;melon&amp;quot;) vec_char ## [1] &amp;quot;apple&amp;quot; &amp;quot;banana&amp;quot; &amp;quot;mandarin&amp;quot; &amp;quot;melon&amp;quot; Once we have created a vector, we can extract its elements using the [] operator.</description>
     </item>
     
     <item>

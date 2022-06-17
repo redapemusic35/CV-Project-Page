@@ -6,7 +6,7 @@ description: |
     Notes from the book "R for Data Science"
 bibliography: "/home/redapemusic35/1-2021-22-Projects/references.bib"
 cascade:
-    draft: false
+  draft: false
     # list or single layouts are possible
     layout: single-series # list, list-sidebar, single-series
     date: 2022-06-15

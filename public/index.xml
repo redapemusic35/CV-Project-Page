@@ -6,7 +6,18 @@
     <description>Recent content on Sam&#39;s Emotions</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 04 Apr 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is Tidy Text?</title>
+      <link>/collection/day05/001/</link>
+      <pubDate>Tue, 14 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/day05/001/</guid>
+      <description>What Tidy Text Look Like?     The specific structure of tidy text is:
+ Each variable is a column Each observation is a row Each type of observational unit is a table  Below is an example of a character vector:
+text &amp;lt;- c(&amp;#34;Because I could not stop for Death -&amp;#34;,  &amp;#34;He kindly stopped for me -&amp;#34;,  &amp;#34;The Carriage held but just Ourselves -&amp;#34;,  &amp;#34;and Immortality&amp;#34;)  text ## [1] &amp;#34;Because I could not stop for Death -&amp;#34; ## [2] &amp;#34;He kindly stopped for me -&amp;#34; ## [3] &amp;#34;The Carriage held but just Ourselves -&amp;#34; ## [4] &amp;#34;and Immortality&amp;#34; We have taken four character strings; &amp;ldquo;Because I could not .</description>
+    </item>
+    
     <item>
       <title>On Truth and Fiction</title>
       <link>/blog/lewis-series/01-truth-fiction-1978/</link>
@@ -25,16 +36,6 @@
       <description>Disclaimer This tutorial requires some experience with both python and R and the command line.
 Some Basics     First, I should point out that much of the content in this section will be based on the book Text Analysis with R for Students of Literature by Matthew L. Jockers.
 R and RStudio     There are at least two different kinds of environments that you can work with R in.</description>
-    </item>
-    
-    <item>
-      <title>Prework</title>
-      <link>/collection/day00/</link>
-      <pubDate>Sat, 23 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/collection/day00/</guid>
-      <description>Welcome to the Introducing Yourself Online workshop! We look forward to meeting you on Monday, January 25, 2021. Before attending the workshop, please complete the following prework.
-Set up RStudio Cloud     Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember).</description>
     </item>
     
     <item>
@@ -71,19 +72,28 @@ beginning     middle     end     </description>
     
     <item>
       <title>Part I. Preliminaries.</title>
-      <link>/collection/day03/01-preliminaries/</link>
+      <link>/collection/day03/009-preliminaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day03/01-preliminaries/</guid>
+      <guid>/collection/day03/009-preliminaries/</guid>
       <description>Mark Alfano maps the prevalence and interconnnections among the main topics and thesis of Nietzsche&amp;rsquo;s philosophical writings as they develop over time by paying attention to to what he has to say about affirmation, agency, the ascetic ideal, drives, embodiment, emotions, the eternal recurrence, friendship, genealogy, health, history, inquiry, justice, life, nihilism, perspectivism, the self, the soverign individual, tragedy, value, virtue, and the will to power (composite map of semantic content).</description>
     </item>
     
     <item>
+      <title>Part 2 of Whatever</title>
+      <link>/collection/day05/002/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>/collection/day05/002/</guid>
+      <description>Blah and blah for now</description>
+    </item>
+    
+    <item>
       <title>Part II</title>
-      <link>/collection/day03/02-selection-and-representation/</link>
+      <link>/collection/day03/010-selection-and-representation/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day03/02-selection-and-representation/</guid>
+      <guid>/collection/day03/010-selection-and-representation/</guid>
       <description>How do we select collections of text, and how do we see these results as a representation?:  Principles of selection and representation selecting documents:  bag of words approach multinominal language model vector space model and similarity metrics   distributed representations of words from language sequences     How to select the core constructs of a distant-reading inquiry. How to operationalize these constructs for querying the Nietzsche Source.</description>
     </item>
     
@@ -138,15 +148,12 @@ My content section is: blog  My layout is: single-series  Images in this page bu
     </item>
     
     <item>
-      <title>Why R?</title>
-      <link>/collection/day01/03-sentimentr/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      <title>Part 3 of Whatever</title>
+      <link>/collection/day05/003/</link>
+      <pubDate>Thu, 14 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day01/03-sentimentr/</guid>
-      <description>Why R?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
-Pre-requisites     First, make sure you have the latest version of the distill package installed from CRAN:
-install.packages(&amp;#34;distill&amp;#34;) Restart your R session. If you use RStudio, use the menu item Session &amp;gt; Restart R or the associated keyboard shortcut:
- Ctrl + Shift + F10 (Windows and Linux) or Command + Shift + F10 (Mac OS).</description>
+      <guid>/collection/day05/003/</guid>
+      <description>Blah and blah for now</description>
     </item>
     
     <item>
@@ -194,31 +201,29 @@ My content section is: blog  My layout is: single-series  Images in this page bu
     
     <item>
       <title>Part III</title>
-      <link>/collection/day03/03-discovery/</link>
+      <link>/collection/day03/011-discovery/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day03/03-discovery/</guid>
+      <guid>/collection/day03/011-discovery/</guid>
       <description> Four Methods of principles of discovery:  discriminating words clustering topic models low-dimensional document embeddings    </description>
     </item>
     
     <item>
       <title>Part IV</title>
-      <link>/collection/day03/04-measurement/</link>
+      <link>/collection/day03/012-measurement/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day03/04-measurement/</guid>
+      <guid>/collection/day03/012-measurement/</guid>
       <description> Principles of measurement word counting an overview of supervised classification coding a training set classifying documents with supervised learning checking performance repurposing discovery methods  </description>
     </item>
     
     <item>
       <title>Quanteda Dictionaries</title>
-      <link>/collection/day01/04-quanteda/</link>
-      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      <link>/collection/day02/04-packages/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day01/04-quanteda/</guid>
-      <description>Quanteda Dictionaries   Next, we will install the quanteda textual analysis set of packages.
-These include:
- quanteda: contains all of the core natural language processing and textual data management functions quanteda.textmodels: contains all of the text models and supporting functions, namely the textmodel_*() functions. This was split from the main package with the v2 release quanteda.textstats: statistics for textual data, namely the textstat_*() functions, split with the v3 release quanteda.</description>
+      <guid>/collection/day02/04-packages/</guid>
+      <description>This post started as an exploration of different types of sentiment analysis. However, I ran into some issues using quanteda. Because of these issues, it occurred to me that I should probably do a post on Quanteda. Therefore, this is now a post using quanteda for text analysis, including sentiment analysis. It should be stated here, that I am largely following the tutorial at quanteda’s home page. Please go there to follow the tutorial because it is possible for some functions to change.</description>
     </item>
     
     <item>
@@ -244,28 +249,25 @@ Silently, the massive imperial structure traversed the sky line, bathing the lan
     
     <item>
       <title>Part V</title>
-      <link>/collection/day03/05-inference/</link>
+      <link>/collection/day03/013-inference/</link>
       <pubDate>Mon, 04 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day03/05-inference/</guid>
+      <guid>/collection/day03/013-inference/</guid>
       <description> Principles of Inference Prediction Causal Inference Text as Outcome Text as Treatment Text as Confounder  </description>
     </item>
     
     <item>
-      <title>Why Netlify?</title>
-      <link>/collection/day02/05-netlify/</link>
+      <title>R Objects and Commands</title>
+      <link>/collection/day02/05-objects/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day02/05-netlify/</guid>
-      <description>Why Netlify?      fitvids(&#39;.shareagain&#39;, {players: &#39;iframe&#39;});  Activity     TIME: ⏱ 10 minutes
-Go to this repo: https://github.com/apreshill/iyo-apero
-Click on the “Deploy to Netlify” button 🚀
-Clone GitHub repo     We just created:
- a full blogdown project… containing a Hugo site… deployed to Netlify… in a remote repository on YOUR GitHub (i.e., https://github.com/&amp;lt;you&amp;gt;/iyo-apero; you may have changed the repo name after clicking on the “Deploy to Netlify” button).</description>
+      <guid>/collection/day02/05-objects/</guid>
+      <description>Vectors Contains a set of values. These include vec_num, number vector and vec_char whwhich is a character vector. c() combines the elements of a vector and &amp;lt;- assigns a vector to a variable.
+vec_num &amp;lt;- c(1, 5, 6, 3) vec_num ## [1] 1 5 6 3 vec_char &amp;lt;- c(&amp;quot;apple&amp;quot;, &amp;quot;banana&amp;quot;, &amp;quot;mandarin&amp;quot;, &amp;quot;melon&amp;quot;) vec_char ## [1] &amp;quot;apple&amp;quot; &amp;quot;banana&amp;quot; &amp;quot;mandarin&amp;quot; &amp;quot;melon&amp;quot; Once we have created a vector, we can extract its elements using the [] operator.</description>
     </item>
     
     <item>
-      <title>Retrieving Song Lyrics</title>
+      <title>Day 4</title>
       <link>/collection/day04/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -286,10 +288,10 @@ Site configuration     Edit your config.toml file. This is your basic Hugo site 
     
     <item>
       <title>Part VI</title>
-      <link>/collection/day03/06-conclusion/</link>
+      <link>/collection/day03/014-conclusion/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>/collection/day03/06-conclusion/</guid>
+      <guid>/collection/day03/014-conclusion/</guid>
       <description> How to use this book in the social sciences Applying our principles beyond text data avoiding the cycle of creation and destruction in social science methodology  </description>
     </item>
     
